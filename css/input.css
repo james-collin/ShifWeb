@@ -6,3 +6,10 @@
     --color-primary: #188C99;
     --color-logo: #D9D9D9;
 }
+
+.hexagon img {
+    width: 300px;
+    height: 300px;
+    filter: url(#goo);
+
+}
