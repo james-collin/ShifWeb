@@ -55,23 +55,56 @@
         </header>
 
         <!-- Hero Content -->
-        <div class="flex items-center justify-between gap-8">
-          <div class="pl-24">
-            <h1 class="font-bold text-7xl/[96px]">
-              Optimizing<br /><span>Chemical</span> Efficacy<br />& Safety
-              Standards
-            </h1>
+        <div class="flex items-center justify-around relative">
+          <div class="flex flex-col gap-20 max-w-3xl pl-24">
+            <div class="flex flex-col gap-2">
+              <h1 class="font-bold text-headline text-7xl/[96px]">
+                Optimizing<br />
+                <div class="text-highlight relative inline-block">
+                  <span>Chemical</span>
+                  <img
+                    class="absolute -bottom-2.5 max-w-[110%]"
+                    src="/assets/images/underline.svg"
+                    alt="underline"
+                  />
+                </div>
+                Efficacy<br />& Safety Standards
+              </h1>
+              <p class="font-poppins font-normal text-secondary text-xl/[30px]">
+                Ensuring compliance and safety through advanced analytics<br />and
+                expert consultation
+              </p>
+            </div>
+            <button
+              class="uppercase font-bold self-baseline py-6 px-12 text-button text-lg tracking-[5%] rounded-[7rem] bg-primary flex items-center justify-center gap-4"
+              type="button"
+            >
+              <span>Discover our approach</span>
+              <span><img src="/assets/icons/arrow.svg" alt="arrow" /></span>
+            </button>
           </div>
           <div class="flex items-center gap-4">
             <img
               src="/assets/images/scientist-holding-green-chemical.png"
               alt="scientist-holding-green-chemical"
-              class="h-[80%]"
+              class="max-h-[600px]"
             />
             <img
               src="/assets/images/chemical-bottle.png"
               alt="chemical-bottle"
             />
+          </div>
+          <div class="absolute flex gap-4 bottom-0 right-64">
+            <button
+              class="w-12 h-12 cursor-pointer rounded-full bg-white flex justify-center items-center"
+            >
+              <img src="/assets/icons/left-arrow.svg" alt="" />
+            </button>
+            <button
+              class="w-12 h-12 cursor-pointer rounded-full bg-primary flex justify-center items-center"
+            >
+              <img src="/assets/icons/right-arrow.svg" alt="" />
+            </button>
           </div>
         </div>
       </div>

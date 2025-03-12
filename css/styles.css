@@ -1,5 +1,6 @@
 /*! tailwindcss v4.0.12 | MIT License | https://tailwindcss.com */
 @import url("https://api.fontshare.com/v2/css?f[]=satoshi@300,301,400,401,500,501,700,701,900,901&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @layer theme, base, components, utilities;
 @layer theme {
   :root, :host {
@@ -7,12 +8,20 @@
     'Noto Color Emoji';
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
     monospace;
+    --color-neutral-900: oklch(0.205 0 0);
+    --color-neutral-950: oklch(0.145 0 0);
     --color-white: #fff;
     --spacing: 0.25rem;
+    --container-3xl: 48rem;
+    --text-lg: 1.125rem;
+    --text-lg--line-height: calc(1.75 / 1.125);
+    --text-xl: 1.25rem;
+    --text-xl--line-height: calc(1.75 / 1.25);
     --text-2xl: 1.5rem;
     --text-2xl--line-height: calc(2 / 1.5);
     --text-7xl: 4.5rem;
     --text-7xl--line-height: 1;
+    --font-weight-normal: 400;
     --font-weight-medium: 500;
     --font-weight-bold: 700;
     --radius-3xl: 1.5rem;
@@ -24,7 +33,12 @@
     --default-mono-font-feature-settings: var(--font-mono--font-feature-settings);
     --default-mono-font-variation-settings: var(--font-mono--font-variation-settings);
     --font-satoshi: 'Satoshi', sans-serif;
+    --font-poppins: "Poppins", sans-serif;
     --color-primary: #188C99;
+    --color-secondary: #274760;
+    --color-highlight: #ECA30C;
+    --color-headline: #171151;
+    --color-button: #F2F5FA;
     --color-logo: #D9D9D9;
   }
 }
@@ -173,11 +187,41 @@
   .absolute {
     position: absolute;
   }
+  .relative {
+    position: relative;
+  }
+  .right-0 {
+    right: calc(var(--spacing) * 0);
+  }
+  .right-10 {
+    right: calc(var(--spacing) * 10);
+  }
+  .right-16 {
+    right: calc(var(--spacing) * 16);
+  }
+  .right-32 {
+    right: calc(var(--spacing) * 32);
+  }
+  .right-64 {
+    right: calc(var(--spacing) * 64);
+  }
+  .-bottom-2 {
+    bottom: calc(var(--spacing) * -2);
+  }
+  .-bottom-2\.5 {
+    bottom: calc(var(--spacing) * -2.5);
+  }
+  .bottom-0 {
+    bottom: calc(var(--spacing) * 0);
+  }
   .mx-auto {
     margin-inline: auto;
   }
   .flex {
     display: flex;
+  }
+  .inline-block {
+    display: inline-block;
   }
   .table {
     display: table;
@@ -194,8 +238,8 @@
   .h-28 {
     height: calc(var(--spacing) * 28);
   }
-  .h-\[80\%\] {
-    height: 80%;
+  .max-h-\[600px\] {
+    max-height: 600px;
   }
   .min-h-\[1080px\] {
     min-height: 1080px;
@@ -215,17 +259,20 @@
   .w-16 {
     width: calc(var(--spacing) * 16);
   }
+  .w-96 {
+    width: calc(var(--spacing) * 96);
+  }
   .w-full {
     width: 100%;
   }
-  .max-w-\[96rem\] {
-    max-width: 96rem;
+  .max-w-3xl {
+    max-width: var(--container-3xl);
+  }
+  .max-w-\[110\%\] {
+    max-width: 110%;
   }
   .max-w-\[120rem\] {
     max-width: 120rem;
-  }
-  .max-w-dvw {
-    max-width: 100dvw;
   }
   .border-collapse {
     border-collapse: collapse;
@@ -245,11 +292,17 @@
   .justify-around {
     justify-content: space-around;
   }
+  .justify-baseline {
+    justify-content: baseline;
+  }
   .justify-between {
     justify-content: space-between;
   }
   .justify-center {
     justify-content: center;
+  }
+  .gap-2 {
+    gap: calc(var(--spacing) * 2);
   }
   .gap-4 {
     gap: calc(var(--spacing) * 4);
@@ -260,8 +313,26 @@
   .gap-8 {
     gap: calc(var(--spacing) * 8);
   }
+  .gap-9 {
+    gap: calc(var(--spacing) * 9);
+  }
+  .gap-12 {
+    gap: calc(var(--spacing) * 12);
+  }
+  .gap-14 {
+    gap: calc(var(--spacing) * 14);
+  }
+  .gap-20 {
+    gap: calc(var(--spacing) * 20);
+  }
+  .self-baseline {
+    align-self: baseline;
+  }
   .rounded-3xl {
     border-radius: var(--radius-3xl);
+  }
+  .rounded-\[7rem\] {
+    border-radius: 7rem;
   }
   .rounded-full {
     border-radius: calc(infinity * 1px);
@@ -277,6 +348,9 @@
   .border-primary {
     border-color: var(--color-primary);
   }
+  .bg-button {
+    background-color: var(--color-button);
+  }
   .bg-logo {
     background-color: var(--color-logo);
   }
@@ -286,20 +360,17 @@
   .bg-white {
     background-color: var(--color-white);
   }
-  .bg-\[url\(\/assets\/images\/Background\.png\)\] {
-    background-image: url(/assets/images/Background.png);
-  }
   .bg-\[url\(\/assets\/images\/Frame\.png\)\] {
     background-image: url(/assets/images/Frame.png);
-  }
-  .bg-\[url\(\/assets\/images\/Frame1\.png\)\] {
-    background-image: url(/assets/images/Frame1.png);
   }
   .bg-cover {
     background-size: cover;
   }
   .bg-no-repeat {
     background-repeat: no-repeat;
+  }
+  .fill-neutral-900 {
+    fill: var(--color-neutral-900);
   }
   .p-12 {
     padding: calc(var(--spacing) * 12);
@@ -310,17 +381,23 @@
   .px-9 {
     padding-inline: calc(var(--spacing) * 9);
   }
+  .px-12 {
+    padding-inline: calc(var(--spacing) * 12);
+  }
   .py-3 {
     padding-block: calc(var(--spacing) * 3);
   }
   .py-6 {
     padding-block: calc(var(--spacing) * 6);
   }
-  .pl-10 {
-    padding-left: calc(var(--spacing) * 10);
-  }
   .pl-24 {
     padding-left: calc(var(--spacing) * 24);
+  }
+  .align-baseline {
+    vertical-align: baseline;
+  }
+  .font-poppins {
+    font-family: var(--font-poppins);
   }
   .font-satoshi {
     font-family: var(--font-satoshi);
@@ -337,6 +414,18 @@
     font-size: var(--text-7xl);
     line-height: 96px;
   }
+  .text-lg {
+    font-size: var(--text-lg);
+    line-height: var(--tw-leading, var(--text-lg--line-height));
+  }
+  .text-xl {
+    font-size: var(--text-xl);
+    line-height: var(--tw-leading, var(--text-xl--line-height));
+  }
+  .text-xl\/\[30px\] {
+    font-size: var(--text-xl);
+    line-height: 30px;
+  }
   .font-bold {
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
@@ -345,16 +434,41 @@
     --tw-font-weight: var(--font-weight-medium);
     font-weight: var(--font-weight-medium);
   }
+  .font-normal {
+    --tw-font-weight: var(--font-weight-normal);
+    font-weight: var(--font-weight-normal);
+  }
+  .tracking-\[5\%\] {
+    --tw-tracking: 5%;
+    letter-spacing: 5%;
+  }
+  .text-button {
+    color: var(--color-button);
+  }
+  .text-headline {
+    color: var(--color-headline);
+  }
+  .text-highlight {
+    color: var(--color-highlight);
+  }
+  .text-neutral-950 {
+    color: var(--color-neutral-950);
+  }
+  .text-secondary {
+    color: var(--color-secondary);
+  }
+  .text-white {
+    color: var(--color-white);
+  }
+  .uppercase {
+    text-transform: uppercase;
+  }
   .underline {
     text-decoration-line: underline;
   }
   .outline {
     outline-style: var(--tw-outline-style);
     outline-width: 1px;
-  }
-  .blur {
-    --tw-blur: blur(8px);
-    filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
   }
   .drop-shadow-lg {
     --tw-drop-shadow: drop-shadow(var(--drop-shadow-lg));
@@ -372,17 +486,16 @@
     }
   }
 }
-.hexagon img {
-  width: 300px;
-  height: 300px;
-  filter: url(#goo);
-}
 @property --tw-border-style {
   syntax: "*";
   inherits: false;
   initial-value: solid;
 }
 @property --tw-font-weight {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-tracking {
   syntax: "*";
   inherits: false;
 }
