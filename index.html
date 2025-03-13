@@ -55,56 +55,99 @@
         </header>
 
         <!-- Hero Content -->
-        <div class="flex items-center justify-around relative">
-          <div class="flex flex-col gap-20 max-w-3xl pl-24">
-            <div class="flex flex-col gap-2">
-              <h1 class="font-bold text-headline text-7xl/[96px]">
-                Optimizing<br />
-                <div class="text-highlight relative inline-block">
-                  <span>Chemical</span>
-                  <img
-                    class="absolute -bottom-2.5 max-w-[110%]"
-                    src="/assets/images/underline.svg"
-                    alt="underline"
-                  />
-                </div>
-                Efficacy<br />& Safety Standards
-              </h1>
-              <p class="font-poppins font-normal text-secondary text-xl/[30px]">
-                Ensuring compliance and safety through advanced analytics<br />and
-                expert consultation
-              </p>
-            </div>
-            <button
-              class="uppercase font-bold self-baseline py-6 px-12 text-button text-lg tracking-[5%] rounded-[7rem] bg-primary flex items-center justify-center gap-4"
-              type="button"
-            >
-              <span>Discover our approach</span>
-              <span><img src="/assets/icons/arrow.svg" alt="arrow" /></span>
-            </button>
-          </div>
-          <div class="flex items-center gap-4">
-            <img
-              src="/assets/images/scientist-holding-green-chemical.png"
-              alt="scientist-holding-green-chemical"
-              class="max-h-[600px]"
-            />
-            <img
-              src="/assets/images/chemical-bottle.png"
-              alt="chemical-bottle"
-            />
-          </div>
+        <div class="relative">
           <div class="absolute flex gap-4 bottom-0 right-64">
             <button
+              onclick="showHero1Section()"
+              id="carousel_left"
               class="w-12 h-12 cursor-pointer rounded-full bg-white flex justify-center items-center"
             >
               <img src="/assets/icons/left-arrow.svg" alt="" />
             </button>
             <button
+              onclick="showHero2Section()"
+              id="carousel_right"
               class="w-12 h-12 cursor-pointer rounded-full bg-primary flex justify-center items-center"
             >
               <img src="/assets/icons/right-arrow.svg" alt="" />
             </button>
+          </div>
+          <div id="hero1" class="flex items-center justify-around relative">
+            <div class="flex flex-col gap-20 max-w-3xl pl-24">
+              <div class="flex flex-col gap-2">
+                <h1 class="font-bold text-headline text-7xl/[96px]">
+                  Optimizing<br />
+                  <div class="text-highlight relative inline-block">
+                    <span>Chemical</span>
+                    <img
+                      class="absolute -bottom-2.5 max-w-[110%]"
+                      src="/assets/images/underline.svg"
+                      alt="underline"
+                    />
+                  </div>
+                  Efficacy<br />& Safety Standards
+                </h1>
+                <p
+                  class="font-poppins font-normal text-secondary text-xl/[30px]"
+                >
+                  Ensuring compliance and safety through advanced analytics<br />and
+                  expert consultation
+                </p>
+              </div>
+              <button
+                class="uppercase font-bold self-baseline py-6 px-12 text-button text-lg tracking-[5%] rounded-[7rem] bg-primary flex items-center justify-center gap-4"
+                type="button"
+              >
+                <span>Discover our approach</span>
+                <span><img src="/assets/icons/arrow.svg" alt="arrow" /></span>
+              </button>
+            </div>
+            <div class="flex items-center gap-4">
+              <img
+                src="/assets/images/scientist-holding-green-chemical.png"
+                alt="scientist-holding-green-chemical"
+                class="max-h-[600px]"
+              />
+              <img
+                src="/assets/images/chemical-bottle.png"
+                alt="chemical-bottle"
+              />
+            </div>
+          </div>
+          <div id="hero2" class="px-60 py-14">
+            <div
+              class="relative flex flex-col gap-8 items-center justify-center py-12 text-center"
+            >
+              <img
+                src="./assets/images/chemical-bottles.png"
+                class="absolute top-0 left-0 h-28 w-28 object-cover rounded-full"
+                alt=""
+              />
+              <h1 class="font-bold text-headline text-7xl/[96px]">
+                Use
+                <div class="text-highlight relative inline-block">
+                  <span>‘Today’ Coupon</span>
+                  <img
+                    class="absolute -bottom-6 w-[110%]"
+                    src="/assets/images/underline.svg"
+                    alt="underline"
+                  />
+                </div>
+                to claim 25%<br />off your first analysis service
+              </h1>
+              <p class="font-poppins text-xl px-32 text-secondary">
+                Unlock 25% off your first analysis service with the exclusive
+                'Today' coupon! Don’t miss out on this limited-time offer to
+                experience our top-quality services at a great discount.
+              </p>
+              <button
+                class="uppercase mx-auto font-bold self-baseline py-6 px-12 text-button text-lg tracking-[5%] rounded-[7rem] bg-primary flex items-center justify-center gap-4"
+                type="button"
+              >
+                <span>Apply Today Coupon</span>
+                <span><img src="./assets/icons/arrow.svg" alt="arrow" /></span>
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -137,7 +180,7 @@
         alt=""
       />
 
-      <div class="max-w-[120rem] mx-auto">
+      <div class="max-w-[120rem] mx-auto flex flex-col gap-28">
         <div class="grid grid-cols-2 gap-2 min-h-[34rem]">
           <div class="relative">
             <img
@@ -611,7 +654,7 @@
 
     <footer
       style="background-image: linear-gradient(90deg, #45bac7 0%, #2799a6 100%)"
-      class="relative py-14 z-10"
+      class="relative py-14 z-10 overflow-hidden"
     >
       <img
         src="./assets/icons/footer-left-comb.svg"
