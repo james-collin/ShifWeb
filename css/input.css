@@ -16,5 +16,9 @@
     --color-button: #F2F5FA;
     --color-logo: #D9D9D9;
     --color-muted: #307BC42B;
+    --color-review: #8A879F;
+    --color-review-secondary: #43A7B2;
     --shadow-whatWeDo: 8px 12px 32.8px 0px #0000001C;
+    --shadow-review: 7px 12px 28.6px 0px #00000040;
+    --shadow-avatar: 0px 10.54px 12.88px 0px #A2AABF40;
 }
