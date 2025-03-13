@@ -340,6 +340,9 @@
   .h-40 {
     height: calc(var(--spacing) * 40);
   }
+  .h-96 {
+    height: calc(var(--spacing) * 96);
+  }
   .h-\[17rem\] {
     height: 17rem;
   }
@@ -399,6 +402,9 @@
   }
   .w-\[110\%\] {
     width: 110%;
+  }
+  .w-auto {
+    width: auto;
   }
   .w-fit {
     width: fit-content;
@@ -748,9 +754,17 @@
     font-size: var(--text-4xl);
     line-height: 3.5rem;
   }
+  .text-4xl\/\[4rem\] {
+    font-size: var(--text-4xl);
+    line-height: 4rem;
+  }
   .text-7xl {
     font-size: var(--text-7xl);
     line-height: var(--tw-leading, var(--text-7xl--line-height));
+  }
+  .text-7xl\/\[4rem\] {
+    font-size: var(--text-7xl);
+    line-height: 4rem;
   }
   .text-7xl\/\[5rem\] {
     font-size: var(--text-7xl);
