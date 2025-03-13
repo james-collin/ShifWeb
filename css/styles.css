@@ -594,6 +594,9 @@
   .bg-\[url\(\/assets\/images\/Frame\.png\)\] {
     background-image: url(/assets/images/Frame.png);
   }
+  .bg-\[url\(\/assets\/images\/Frame3\.png\)\] {
+    background-image: url(/assets/images/Frame3.png);
+  }
   .bg-\[url\(\/assets\/images\/founder\.png\)\] {
     background-image: url(/assets/images/founder.png);
   }
@@ -708,6 +711,10 @@
   .text-2xl {
     font-size: var(--text-2xl);
     line-height: var(--tw-leading, var(--text-2xl--line-height));
+  }
+  .text-2xl\/\[2\.5rem\] {
+    font-size: var(--text-2xl);
+    line-height: 2.5rem;
   }
   .text-2xl\/\[2rem\] {
     font-size: var(--text-2xl);
