@@ -9,29 +9,109 @@
   <body class="font-satoshi">
     <!-- Hero Section -->
     <section
-      class="w-full min-h-[1080px] bg-[url(/assets/images/Frame.png)] bg-no-repeat bg-cover p-12"
+      class="w-full min-h-[1080px] bg-[url(/assets/images/Frame.png)] bg-no-repeat bg-cover p-12 overflow-hidden"
     >
       <div class="max-w-[120rem] mx-auto flex flex-col gap-8">
         <!-- Header Section -->
         <header
-          class="w-4/5 mx-auto bg-white rounded-3xl h-28 flex justify-between py-6 px-9"
+          class="w-full xl:w-4/5 mx-auto bg-white rounded-3xl h-28 flex justify-between py-3 px-5 lg:py-6 lg:px-9"
         >
           <div class="flex gap-6 items-center">
             <div class="h-16 w-16 rounded-full bg-logo"></div>
             <h1 class="text-2xl font-bold"><a href="/">LOGO HERE</a></h1>
           </div>
-          <div class="flex items-center gap-4">
-            <nav class="flex justify-around gap-4">
+          <div class="flex relative items-center md:hidden z-50">
+            <button
+              data-collapse-toggle="navbar"
+              type="button"
+              class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+              aria-controls="navbar"
+              aria-expanded="false"
+              onclick="openNav()"
+            >
+              <span class="sr-only">Open main menu</span>
+              <svg
+                class="w-5 h-5"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 17 14"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M1 1h15M1 7h15M1 13h15"
+                />
+              </svg>
+            </button>
+            <div
+              id="mobile-nav"
+              class="absolute hidden bg-white rounded-2xl p-4 right-10 top-10 shadow-about-us-card"
+            >
+              <nav
+                class="flex flex-col items-center w-40 justify-around gap-2 lg:gap-4"
+              >
+                <div
+                  class="lg:px-6 lg:py-3 data-active:border-b-4 data-active:border-primary"
+                >
+                  <a href="/" class="cursor-pointer font-medium drop-shadow-lg"
+                    >Home</a
+                  >
+                </div>
+                <div
+                  data-active
+                  class="lg:px-6 lg:py-3 data-active:border-b-4 data-active:border-primary"
+                >
+                  <a
+                    href="/services.html"
+                    class="cursor-pointer font-medium hover:drop-shadow-lg"
+                    >Services</a
+                  >
+                </div>
+                <div
+                  class="lg:px-6 lg:py-3 data-active:border-b-4 data-active:border-primary"
+                >
+                  <a
+                    href="/"
+                    class="cursor-pointer font-medium hover:drop-shadow-lg"
+                    >Insight <span class="hidden lg:inline">Navigator</span></a
+                  >
+                </div>
+                <div
+                  class="lg:px-6 lg:py-3 data-active:border-b-4 data-active:border-primary"
+                >
+                  <a
+                    href="/about.html"
+                    class="cursor-pointer font-medium hover:drop-shadow-lg"
+                    >About Us</a
+                  >
+                </div>
+                <div
+                  class="lg:px-6 lg:py-3 data-active:border-b-4 data-active:border-primary"
+                >
+                  <a
+                    href="/contact.html"
+                    class="cursor-pointer font-medium hover:drop-shadow-lg"
+                    >Contact Us</a
+                  >
+                </div>
+              </nav>
+            </div>
+          </div>
+          <div class="hidden md:flex items-center gap-4" id="navbar">
+            <nav class="flex justify-around gap-2 lg:gap-4">
               <div
-                class="px-6 py-3 data-active:border-b-4 data-active:border-primary"
+                data-active
+                class="lg:px-6 lg:py-3 data-active:border-b-4 data-active:border-primary"
               >
                 <a href="/" class="cursor-pointer font-medium drop-shadow-lg"
                   >Home</a
                 >
               </div>
               <div
-                data-active
-                class="px-6 py-3 data-active:border-b-4 data-active:border-primary"
+                class="lg:px-6 lg:py-3 data-active:border-b-4 data-active:border-primary"
               >
                 <a
                   href="/services.html"
@@ -40,14 +120,16 @@
                 >
               </div>
               <div
-                class="px-6 py-3 data-active:border-b-4 data-active:border-primary"
+                class="lg:px-6 lg:py-3 data-active:border-b-4 data-active:border-primary"
               >
-                <a class="cursor-pointer font-medium hover:drop-shadow-lg"
-                  >Insight Navigator</a
+                <a
+                  href="/"
+                  class="cursor-pointer font-medium hover:drop-shadow-lg"
+                  >Insight <span class="hidden lg:inline">Navigator</span></a
                 >
               </div>
               <div
-                class="px-6 py-3 data-active:border-b-4 data-active:border-primary"
+                class="lg:px-6 lg:py-3 data-active:border-b-4 data-active:border-primary"
               >
                 <a
                   href="/about.html"
@@ -56,7 +138,7 @@
                 >
               </div>
               <div
-                class="px-6 py-3 data-active:border-b-4 data-active:border-primary"
+                class="lg:px-6 lg:py-3 data-active:border-b-4 data-active:border-primary"
               >
                 <a
                   href="/contact.html"
@@ -75,7 +157,7 @@
 
         <!-- Hero Content -->
         <div class="relative">
-          <div class="absolute flex gap-4 bottom-0 right-64">
+          <div class="absolute flex gap-4 bottom-0 right-0 xl:right-64">
             <button
               onclick="showHero1Section()"
               id="carousel_left"
@@ -93,9 +175,11 @@
           </div>
           <div
             id="hero1"
-            class="flex items-center justify-around relative hidden"
+            class="flex flex-col gap-4 xl:gap-0 xl:flex-row items-center justify-around relative hidden"
           >
-            <div class="flex flex-col gap-20 max-w-3xl pl-24">
+            <div
+              class="flex order-2 xl:order-1 flex-col gap-20 max-w-3xl xl:pl-14 2xl:pl-24"
+            >
               <div class="flex flex-col gap-2">
                 <h1 class="font-bold text-headline text-7xl/[96px]">
                   Optimizing<br />
@@ -124,11 +208,11 @@
                 <span><img src="/assets/icons/arrow.svg" alt="arrow" /></span>
               </button>
             </div>
-            <div class="flex items-center gap-4">
+            <div class="flex order-1 xl:order-2 items-center gap-4">
               <img
                 src="/assets/images/scientist-holding-green-chemical.png"
                 alt="scientist-holding-green-chemical"
-                class="max-h-[600px]"
+                class="max-h-[350px] xl:max-h-[450px] 2xl:max-h-[600px]"
               />
               <img
                 src="/assets/images/chemical-bottle.png"
@@ -136,13 +220,13 @@
               />
             </div>
           </div>
-          <div id="hero2" class="px-60 py-14">
+          <div id="hero2" class="px-0 xl:px-60 py-14">
             <div
               class="relative flex flex-col gap-8 items-center justify-center py-12 text-center"
             >
               <img
                 src="./assets/images/chemical-bottles.png"
-                class="absolute top-0 left-0 h-28 w-28 object-cover rounded-full"
+                class="absolute -top-12 xl:-left-10 lg:-left-0 h-28 w-28 object-cover rounded-full"
                 alt=""
               />
               <h1 class="font-bold text-headline text-7xl/[96px]">
@@ -157,7 +241,9 @@
                 </div>
                 to claim 25%<br />off your first analysis service
               </h1>
-              <p class="font-poppins text-xl px-32 text-secondary">
+              <p
+                class="font-poppins text-xl px-10 md:px-20 lg:px-32 text-secondary"
+              >
                 Unlock 25% off your first analysis service with the exclusive
                 'Today' coupon! Don’t miss out on this limited-time offer to
                 experience our top-quality services at a great discount.
@@ -176,7 +262,7 @@
     </section>
 
     <section
-      class="w-full bg-[url(/assets/images/Background2.png)] bg-no-repeat bg-cover px-56 py-14 flex flex-col gap-28 overflow-hidden relative z-10"
+      class="w-full bg-[url(/assets/images/Background2.png)] bg-no-repeat bg-cover px-8 md:px-28 2xl:px-56 py-14 flex flex-col gap-28 overflow-hidden relative z-10"
     >
       <img
         class="absolute top-0 left-0 -z-10"
@@ -203,20 +289,22 @@
       />
 
       <div class="max-w-[120rem] mx-auto flex flex-col gap-28">
-        <div class="grid grid-cols-2 gap-2 min-h-[34rem]">
-          <div class="relative">
+        <div
+          class="grid lg:grid-cols-2 grid-rows-2 lg:grid-rows-1 grid-flow-row gap-2 min-h-[34rem]"
+        >
+          <div class="relative order-2 lg:order-1">
             <img
-              class="absolute bottom-0 left-0 h-[17rem] z-10"
+              class="absolute bottom-64 md:bottom-56 2xl:bottom-0 left-0 h-[10rem] 2xl:h-[17rem] z-10"
               src="/assets/images/lab-weighing-scale.png"
               alt="lab-weighing-scale"
             />
             <img
-              class="absolute -top-0 right-20 h-[34rem]"
+              class="absolute -top-0 right-0 md:right-20 h-[25rem] 2xl:h-[34rem]"
               src="/assets/images/scientist-microscope.png"
               alt="scientist-microscope"
             />
           </div>
-          <div class="self-center flex flex-col gap-4">
+          <div class="self-center flex flex-col gap-4 order-1 lg:order-2">
             <h2
               class="font-figtree text-7xl/[64px] tracking-[0%] font-bold text-primary"
             >
@@ -246,7 +334,7 @@
           >
             What We Do?
           </h2>
-          <div class="grid grid-cols-4 gap-6">
+          <div class="grid xl:grid-cols-4 md:grid-cols-2 gap-6">
             <div
               class="rounded-2xl bg-white px-4 py-8 flex flex-col gap-4 shadow-whatWeDo"
             >
@@ -352,7 +440,9 @@
       </div>
     </section>
 
-    <section class="w-full bg-white py-14 px-56 flex flex-col gap-14">
+    <section
+      class="w-full bg-white py-14 px-10 lg:px-28 2xl:px-56 flex flex-col gap-14"
+    >
       <div class="flex justify-center">
         <h2
           class="font-figtree text-7xl/[64px] tracking-[0%] font-bold text-primary"
@@ -361,7 +451,7 @@
         </h2>
       </div>
 
-      <div class="grid grid-cols-[1fr_10px_1fr] gap-x-24">
+      <div class="md:grid hidden grid-cols-[1fr_10px_1fr] gap-x-24">
         <!-- Item-1 -->
         <div class="flex justify-end py-10">
           <div
@@ -522,17 +612,121 @@
           </div>
         </div>
       </div>
+      <div class="md:hidden flex flex-col gap-24">
+        <div class="flex gap-8">
+          <div
+            class="font-figtree font-bold text-7xl/[5rem] tracking-[0%] text-muted"
+          >
+            01
+          </div>
+          <div class="flex flex-col gap-4 pt-6">
+            <p
+              class="font-figtree font-semibold text-3xl/[2.5rem] text-secondary"
+            >
+              Experiment Design
+            </p>
+            <p
+              class="font-poppins text-secondary opacity-60 text-base/[1.5rem]"
+            >
+              Define hypothesis, set objectives, design experiment
+            </p>
+          </div>
+        </div>
+        <div class="flex justify-end">
+          <div class="flex gap-8 text-right">
+            <div class="flex flex-col gap-4 pt-6">
+              <p
+                class="font-figtree font-semibold text-3xl/[2.5rem] text-secondary"
+              >
+                Data Collection
+              </p>
+              <p
+                class="font-poppins text-secondary opacity-60 text-base/[1.5rem]"
+              >
+                Gather data from sensors, lab tests, and field inputs
+              </p>
+            </div>
+            <div
+              class="font-figtree font-bold text-7xl/[5rem] tracking-[0%] text-primary"
+            >
+              02
+            </div>
+          </div>
+        </div>
+        <div class="flex gap-8">
+          <div
+            class="font-figtree font-bold text-7xl/[5rem] tracking-[0%] text-muted"
+          >
+            03
+          </div>
+          <div class="flex flex-col gap-4 pt-6">
+            <p
+              class="font-figtree font-semibold text-3xl/[2.5rem] text-secondary"
+            >
+              Analysis
+            </p>
+            <p
+              class="font-poppins text-secondary opacity-60 text-base/[1.5rem]"
+            >
+              Process data using statistical methods and ML models
+            </p>
+          </div>
+        </div>
+        <div class="flex justify-end">
+          <div class="flex gap-8 text-right">
+            <div class="flex flex-col gap-4 pt-6">
+              <p
+                class="font-figtree font-semibold text-3xl/[2.5rem] text-secondary"
+              >
+                Reporting
+              </p>
+              <p
+                class="font-poppins text-secondary opacity-60 text-base/[1.5rem]"
+              >
+                Generate dynamic dashboards & detailed reports
+              </p>
+            </div>
+            <div
+              class="font-figtree font-bold text-7xl/[5rem] tracking-[0%] text-muted"
+            >
+              04
+            </div>
+          </div>
+        </div>
+        <div class="flex gap-8">
+          <div
+            class="font-figtree font-bold text-7xl/[5rem] tracking-[0%] text-muted"
+          >
+            05
+          </div>
+          <div class="flex flex-col gap-4 pt-6">
+            <p
+              class="font-figtree font-semibold text-3xl/[2.5rem] text-secondary"
+            >
+              Service Options & Price Category
+            </p>
+            <p
+              class="font-poppins text-secondary opacity-60 text-base/[1.5rem]"
+            >
+              Display service package cards (e.g., Basic, Standard, Premium)
+              with price ranges and brief package details
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section class="w-full">
-      <div class="px-56 py-14 relative">
+      <div class="px-8 md:px-28 2xl:px-56 py-14 relative">
         <img
           class="absolute top-0 inset-0 w-full object-cover -z-10 h-2/5"
           src="./assets/images/Frame2.png"
           alt=""
         />
         <div class="max-w-[120rem] mx-auto flex flex-col gap-28">
-          <div class="flex flex-col items-center w-1/2 mx-auto gap-4">
+          <div
+            class="flex flex-col items-center w-full lg:w-2/3 2xl:w-1/2 mx-auto gap-4"
+          >
             <h2
               class="font-satoshi font-bold text-7xl/[5rem] text-white text-center"
             >
@@ -546,7 +740,7 @@
             </p>
           </div>
           <div class="flex flex-col gap-12">
-            <div class="grid grid-cols-3 gap-14">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-14">
               <div
                 class="bg-white rounded-2xl px-8 py-16 relative shadow-review"
               >
@@ -652,7 +846,7 @@
             </div>
           </div>
           <div
-            class="bg-[#FFB2125E] px-14 py-10 rounded-2xl flex justify-between gap-60"
+            class="bg-[#43B7C45E] lg:px-14 py-10 px-8 rounded-2xl flex lg:flex-row flex-col justify-between gap-10 lg:gap-30 xl:gap-60"
           >
             <div class="flex items-center gap-6">
               <div
@@ -690,7 +884,9 @@
       />
 
       <div class="max-w-[120rem] mx-auto text-white z-10">
-        <div class="flex justify-around">
+        <div
+          class="grid lg:grid-cols-5 md:grid-cols-3 grid-cols-2 gap-8 lg:gap-0 text-center px-4 md:px-0"
+        >
           <div class="flex flex-col font-satoshi gap-2.5">
             <p class="font-bold text-4xl/[1.5rem]">300+</p>
             <p class="text-lg/[1.5rem]">Chemicals Worked With</p>
@@ -713,8 +909,8 @@
           </div>
         </div>
 
-        <div class="px-56 py-32">
-          <div class="grid grid-cols-4 gap-10">
+        <div class="px-8 md:px-28 2xl:px-56 py-32">
+          <div class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-10">
             <div class="flex flex-col gap-6">
               <div class="flex items-center gap-6">
                 <div class="w-16 h-16 bg-white rounded-full"></div>
@@ -804,5 +1000,7 @@
         </div>
       </div>
     </footer>
+
+    <script src="./js/index.js"></script>
   </body>
 </html>
