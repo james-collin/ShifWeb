@@ -618,6 +618,12 @@
   .gap-28 {
     gap: calc(var(--spacing) * 28);
   }
+  .gap-30 {
+    gap: calc(var(--spacing) * 30);
+  }
+  .gap-40 {
+    gap: calc(var(--spacing) * 40);
+  }
   .gap-60 {
     gap: calc(var(--spacing) * 60);
   }
@@ -1342,6 +1348,11 @@
       gap: calc(var(--spacing) * 4);
     }
   }
+  .lg\:gap-30 {
+    @media (width >= 64rem) {
+      gap: calc(var(--spacing) * 30);
+    }
+  }
   .lg\:px-6 {
     @media (width >= 64rem) {
       padding-inline: calc(var(--spacing) * 6);
@@ -1350,6 +1361,11 @@
   .lg\:px-9 {
     @media (width >= 64rem) {
       padding-inline: calc(var(--spacing) * 9);
+    }
+  }
+  .lg\:px-14 {
+    @media (width >= 64rem) {
+      padding-inline: calc(var(--spacing) * 14);
     }
   }
   .lg\:px-28 {
@@ -1435,6 +1451,11 @@
   .xl\:gap-0 {
     @media (width >= 80rem) {
       gap: calc(var(--spacing) * 0);
+    }
+  }
+  .xl\:gap-60 {
+    @media (width >= 80rem) {
+      gap: calc(var(--spacing) * 60);
     }
   }
   .xl\:px-56 {
