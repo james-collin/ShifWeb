@@ -13,23 +13,104 @@
       <div class="max-w-[120rem] mx-auto flex flex-col gap-20">
         <!-- Header Section -->
         <header
-          class="w-4/5 mx-auto bg-white rounded-3xl h-28 flex justify-between py-6 px-9"
+          class="w-full xl:w-4/5 mx-auto bg-white rounded-3xl h-28 flex justify-between py-3 px-5 lg:py-6 lg:px-9"
         >
           <div class="flex gap-6 items-center">
             <div class="h-16 w-16 rounded-full bg-logo"></div>
             <h1 class="text-2xl font-bold"><a href="/">LOGO HERE</a></h1>
           </div>
-          <div class="flex items-center gap-4">
-            <nav class="flex justify-around gap-4">
+          <div class="flex relative items-center md:hidden z-50">
+            <button
+              data-collapse-toggle="navbar"
+              type="button"
+              class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+              aria-controls="navbar"
+              aria-expanded="false"
+              onclick="openNav()"
+            >
+              <span class="sr-only">Open main menu</span>
+              <svg
+                class="w-5 h-5"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 17 14"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M1 1h15M1 7h15M1 13h15"
+                />
+              </svg>
+            </button>
+            <div
+              id="mobile-nav"
+              class="absolute hidden bg-white rounded-2xl p-4 right-10 top-10 shadow-about-us-card"
+            >
+              <nav
+                class="flex flex-col items-center w-40 justify-around gap-2 lg:gap-4"
+              >
+                <div
+                  class="lg:px-6 lg:py-3 data-active:border-b-4 data-active:border-primary"
+                >
+                  <a href="/" class="cursor-pointer font-medium drop-shadow-lg"
+                    >Home</a
+                  >
+                </div>
+                <div
+                  class="lg:px-6 lg:py-3 data-active:border-b-4 data-active:border-primary"
+                >
+                  <a
+                    href="/services.html"
+                    class="cursor-pointer font-medium hover:drop-shadow-lg"
+                    >Services</a
+                  >
+                </div>
+                <div
+                  class="lg:px-6 lg:py-3 data-active:border-b-4 data-active:border-primary"
+                >
+                  <a
+                    href="/"
+                    class="cursor-pointer font-medium hover:drop-shadow-lg"
+                    >Insight <span class="hidden lg:inline">Navigator</span></a
+                  >
+                </div>
+                <div
+                  data-active
+                  class="lg:px-6 lg:py-3 data-active:border-b-4 data-active:border-primary"
+                >
+                  <a
+                    href="/about.html"
+                    class="cursor-pointer font-medium hover:drop-shadow-lg"
+                    >About Us</a
+                  >
+                </div>
+                <div
+                  class="lg:px-6 lg:py-3 data-active:border-b-4 data-active:border-primary"
+                >
+                  <a
+                    href="/contact.html"
+                    class="cursor-pointer font-medium hover:drop-shadow-lg"
+                    >Contact Us</a
+                  >
+                </div>
+              </nav>
+            </div>
+          </div>
+          <div class="hidden md:flex items-center gap-4" id="navbar">
+            <nav class="flex justify-around gap-2 lg:gap-4">
               <div
-                class="px-6 py-3 data-active:border-b-4 data-active:border-primary"
+                data-active
+                class="lg:px-6 lg:py-3 data-active:border-b-4 data-active:border-primary"
               >
                 <a href="/" class="cursor-pointer font-medium drop-shadow-lg"
                   >Home</a
                 >
               </div>
               <div
-                class="px-6 py-3 data-active:border-b-4 data-active:border-primary"
+                class="lg:px-6 lg:py-3 data-active:border-b-4 data-active:border-primary"
               >
                 <a
                   href="/services.html"
@@ -38,15 +119,16 @@
                 >
               </div>
               <div
-                class="px-6 py-3 data-active:border-b-4 data-active:border-primary"
+                class="lg:px-6 lg:py-3 data-active:border-b-4 data-active:border-primary"
               >
-                <a class="cursor-pointer font-medium hover:drop-shadow-lg"
-                  >Insight Navigator</a
+                <a
+                  href="/"
+                  class="cursor-pointer font-medium hover:drop-shadow-lg"
+                  >Insight <span class="hidden lg:inline">Navigator</span></a
                 >
               </div>
               <div
-                data-active
-                class="px-6 py-3 data-active:border-b-4 data-active:border-primary"
+                class="lg:px-6 lg:py-3 data-active:border-b-4 data-active:border-primary"
               >
                 <a
                   href="/about.html"
@@ -55,7 +137,7 @@
                 >
               </div>
               <div
-                class="px-6 py-3 data-active:border-b-4 data-active:border-primary"
+                class="lg:px-6 lg:py-3 data-active:border-b-4 data-active:border-primary"
               >
                 <a
                   href="/contact.html"
@@ -87,10 +169,14 @@
       </div>
     </section>
 
-    <section class="max-w-[120rem] mx-auto px-56 py-14">
-      <div class="flex items-center gap-14">
-        <img src="./assets/images/grouped-about-us.png" alt="" />
-        <div class="flex flex-col gap-6">
+    <section class="max-w-[120rem] mx-auto px-8 md:px-28 2xl:px-56 py-14">
+      <div class="flex flex-col lg:flex-row items-center gap-14">
+        <img
+          class="order-2 lg:order-1 max-h-[600px] md:h-auto"
+          src="./assets/images/grouped-about-us.png"
+          alt=""
+        />
+        <div class="flex flex-col gap-6 order-1 lg:order-2">
           <h2 class="font-figtree font-bold text-7xl text-primary">
             Company History
           </h2>
@@ -108,13 +194,13 @@
       </div>
     </section>
 
-    <section class="max-w-[120rem] mx-auto px-56 py-14">
-      <div class="flex gap-28">
+    <section class="max-w-[120rem] mx-auto px-8 md:px-28 2xl:px-56 py-14">
+      <div class="flex gap-28 items-start flex-col lg:flex-row">
         <div class="flex flex-col flex-grow gap-12">
           <h2 class="font-figtree font-bold text-7xl text-primary">
             Why Choose Us
           </h2>
-          <div class="grid grid-cols-2 gap-12">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div
               class="flex flex-col p-4 gap-4 shadow-about-us-card rounded-2xl"
             >
@@ -193,7 +279,11 @@
             </div>
           </div>
         </div>
-        <img src="./assets/images/man-in-lab.png" alt="" />
+        <img
+          class="max-w-[40%] xl:w-auto self-center hidden md:block"
+          src="./assets/images/man-in-lab.png"
+          alt=""
+        />
       </div>
     </section>
 
