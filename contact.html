@@ -443,8 +443,11 @@
       </div>
     </footer>
 
-    <script defer src="./js/index.js"></script>
     <script>
+      const openNav = () => {
+        document.getElementById("mobile-nav")?.classList.toggle("hidden");
+      };
+
       const toggleChat = () => {
         document.getElementById("backdrop").classList.toggle("hidden");
         document.getElementById("chat").classList.toggle("hidden");

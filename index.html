@@ -235,16 +235,16 @@
 
         <!-- Hero Content -->
         <div class="relative">
-          <div class="absolute flex gap-4 bottom-0 right-0 xl:right-64">
+          <div class="absolute flex gap-4 bottom-0 right-0 xl:right-64 z-20">
             <button
-              onclick="showHero1Section()"
+              onclick="toggleHero1()"
               id="carousel_left"
               class="w-12 h-12 cursor-pointer rounded-full bg-white flex justify-center items-center"
             >
               <img src="/assets/icons/left-arrow.svg" alt="" />
             </button>
             <button
-              onclick="showHero2Section()"
+              onclick="toggleHero2()"
               id="carousel_right"
               class="w-12 h-12 cursor-pointer rounded-full bg-primary flex justify-center items-center"
             >
@@ -1077,8 +1077,11 @@
       </div>
     </footer>
 
-    <script src="./js/index.js"></script>
     <script>
+      const openNav = () => {
+        document.getElementById("mobile-nav")?.classList.toggle("hidden");
+      };
+
       const toggleChat = () => {
         document.getElementById("backdrop").classList.toggle("hidden");
         document.getElementById("chat").classList.toggle("hidden");
@@ -1088,6 +1091,17 @@
       document
         .getElementById("chat-close")
         .addEventListener("click", toggleChat);
+
+      const toggleHero1 = () => {
+        console.log("🚀 ~ toggleHero1 ~ toggleHero1:");
+        document.getElementById("hero1").classList.remove("hidden");
+        document.getElementById("hero2").classList.add("hidden");
+      };
+
+      const toggleHero2 = () => {
+        document.getElementById("hero1").classList.add("hidden");
+        document.getElementById("hero2").classList.remove("hidden");
+      };
     </script>
   </body>
 </html>
