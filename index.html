@@ -7,6 +7,84 @@
     <link rel="stylesheet" href="/css/styles.css" />
   </head>
   <body class="font-satoshi">
+    <!-- Chatbot Icon -->
+    <button
+      class="fixed bottom-4 right-4 md:bottom-6 md:right-6 rounded-full shadow-lg transition z-[1000] focus:outline-none"
+    >
+      <div class="relative z-[1000]">
+        <div
+          id="chat"
+          class="absolute hidden bottom-24 md:bottom-28 w-[300px] h-[450px] md:w-[400px] flex-col md:h-[600px] flex right-0 bg-white rounded-3xl overflow-hidden"
+        >
+          <div
+            class="bg-primary py-4 px-4 md:px-8 text-white flex justify-between items-center"
+          >
+            <p class="text-left font-satoshi font-bold text-xl">Chat with us</p>
+            <div class="flex gap-4">
+              <img class="h-4" src="./assets/icons/down.svg" alt="" />
+              <img
+                id="chat-close"
+                class="h-4"
+                src="./assets/icons/close.svg"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="flex-grow min-h-0 overflow-auto p-4 flex gap-4 flex-col">
+            <div
+              class="bg-[#F5F5F5] text-left w-fit max-w-[250px] text-[#393939] font-satoshi font-medium p-4 rounded-2xl rounded-tl-none"
+            >
+              Hi! How can i help you today?
+            </div>
+            <div
+              class="bg-[#F5F5F5] text-left w-fit max-w-[250px] text-[#393939] font-satoshi flex flex-col gap-3 font-medium p-4 rounded-2xl rounded-tl-none"
+            >
+              <p>[Type your question or choose from options below]</p>
+              <div class="text-[#20A1FF]">Learn about our services</div>
+              <hr class="text-[#888888]" />
+              <div class="text-[#20A1FF]">Learn about our services</div>
+              <hr class="text-[#888888]" />
+              <div class="text-[#20A1FF]">Learn about our services</div>
+              <hr class="text-[#888888]" />
+            </div>
+            <div
+              class="bg-primary text-left w-fit max-w-[250px] text-white font-satoshi font-medium p-4 rounded-2xl rounded-tr-none self-end"
+            >
+              Learn about our services
+            </div>
+          </div>
+          <div class="border-t border-[#929292] p-4 flex gap-3">
+            <input
+              type="text"
+              placeholder="Type your message here"
+              class="w-full p-2 focus:outline-none border border-[#929292] text-[#929292] rounded-md font-inter"
+            />
+            <div
+              class="w-12 h-12 bg-primary flex justify-center items-center rounded-lg shrink-0"
+            >
+              <img src="./assets/icons/send.svg" alt="" />
+            </div>
+          </div>
+        </div>
+        <div
+          class="w-8 h-8 bg-[#FF6161] rounded-full text-white flex justify-center items-center absolute -top-4 right-0"
+        >
+          1
+        </div>
+
+        <img
+          id="chat-bot"
+          src="./assets/icons/chat.svg"
+          class="h-16 md:h-24"
+          alt=""
+        />
+      </div>
+      <div
+        id="submission-dialog"
+        class="fixed inset-0 bg-[#4D4D4DAD] justify-center items-center hidden z-50"
+      ></div>
+    </button>
+
     <!-- Hero Section -->
     <section
       class="w-full min-h-[1080px] bg-[url(/assets/images/Frame.png)] bg-no-repeat bg-cover p-12 overflow-hidden"
@@ -1000,5 +1078,16 @@
     </footer>
 
     <script src="./js/index.js"></script>
+    <script>
+      const toggleChat = () => {
+        document.getElementById("submission-dialog").classList.toggle("hidden");
+        document.getElementById("chat").classList.toggle("hidden");
+      };
+
+      document.getElementById("chat-bot").addEventListener("click", toggleChat);
+      document
+        .getElementById("chat-close")
+        .addEventListener("click", toggleChat);
+    </script>
   </body>
 </html>
