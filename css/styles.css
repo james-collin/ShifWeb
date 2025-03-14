@@ -841,27 +841,6 @@
   .bg-white {
     background-color: var(--color-white);
   }
-  .bg-\[url\(\/assets\/images\/Background2\.png\)\] {
-    background-image: url(/assets/images/Background2.png);
-  }
-  .bg-\[url\(\/assets\/images\/Frame\.png\)\] {
-    background-image: url(/assets/images/Frame.png);
-  }
-  .bg-\[url\(\/assets\/images\/Frame3\.png\)\] {
-    background-image: url(/assets/images/Frame3.png);
-  }
-  .bg-\[url\(\/assets\/images\/founder\.png\)\] {
-    background-image: url(/assets/images/founder.png);
-  }
-  .bg-\[url\(\/assets\/images\/reviewer1\.png\)\] {
-    background-image: url(/assets/images/reviewer1.png);
-  }
-  .bg-\[url\(\/assets\/images\/reviewer2\.png\)\] {
-    background-image: url(/assets/images/reviewer2.png);
-  }
-  .bg-\[url\(\/assets\/images\/reviewer3\.png\)\] {
-    background-image: url(/assets/images/reviewer3.png);
-  }
   .bg-cover {
     background-size: cover;
   }
@@ -2002,6 +1981,24 @@
 }
 .bg-frame {
   background-image: url(../assets/images/Frame.png);
+}
+.bg-frame3 {
+  background-image: url(../assets/images/Frame3.png);
+}
+.bg-background2 {
+  background-image: url(../assets/images/Background2.png);
+}
+.bg-reviewer1 {
+  background-image: url(../assets/images/reviewer1.png);
+}
+.bg-reviewer2 {
+  background-image: url(../assets/images/reviewer2.png);
+}
+.bg-reviewer3 {
+  background-image: url(../assets/images/reviewer3.png);
+}
+.bg-founder {
+  background-image: url(../assets/images/founder.png);
 }
 @property --tw-translate-x {
   syntax: "*";

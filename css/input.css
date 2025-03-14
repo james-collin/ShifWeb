@@ -40,3 +40,27 @@
 .bg-frame {
     background-image: url(../assets/images/Frame.png);
 }
+
+.bg-frame3 {
+    background-image: url(../assets/images/Frame3.png);
+}
+
+.bg-background2 {
+    background-image: url(../assets/images/Background2.png);
+}
+
+.bg-reviewer1 {
+    background-image: url(../assets/images/reviewer1.png);
+}
+
+.bg-reviewer2 {
+    background-image: url(../assets/images/reviewer2.png);
+}
+
+.bg-reviewer3 {
+    background-image: url(../assets/images/reviewer3.png);
+}
+
+.bg-founder {
+    background-image: url(../assets/images/founder.png);
+}
