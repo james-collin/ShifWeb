@@ -80,7 +80,7 @@
         />
       </div>
       <div
-        id="submission-dialog"
+        id="backdrop"
         class="fixed inset-0 bg-[#4D4D4DAD] justify-center items-center hidden z-50"
       ></div>
     </button>
@@ -1080,7 +1080,7 @@
     <script src="./js/index.js"></script>
     <script>
       const toggleChat = () => {
-        document.getElementById("submission-dialog").classList.toggle("hidden");
+        document.getElementById("backdrop").classList.toggle("hidden");
         document.getElementById("chat").classList.toggle("hidden");
       };
 
