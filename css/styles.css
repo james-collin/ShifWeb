@@ -785,6 +785,9 @@
   .justify-end {
     justify-content: flex-end;
   }
+  .gap-0 {
+    gap: calc(var(--spacing) * 0);
+  }
   .gap-2 {
     gap: calc(var(--spacing) * 2);
   }
@@ -1173,6 +1176,9 @@
   }
   .pt-6 {
     padding-top: calc(var(--spacing) * 6);
+  }
+  .pt-12 {
+    padding-top: calc(var(--spacing) * 12);
   }
   .pb-8 {
     padding-bottom: calc(var(--spacing) * 8);
@@ -1858,6 +1864,11 @@
       display: none;
     }
   }
+  .md\:inline {
+    @media (width >= 48rem) {
+      display: inline;
+    }
+  }
   .md\:h-6 {
     @media (width >= 48rem) {
       height: calc(var(--spacing) * 6);
@@ -1948,6 +1959,11 @@
       width: calc(var(--spacing) * 16);
     }
   }
+  .md\:w-32 {
+    @media (width >= 48rem) {
+      width: calc(var(--spacing) * 32);
+    }
+  }
   .md\:w-56 {
     @media (width >= 48rem) {
       width: calc(var(--spacing) * 56);
@@ -1993,6 +2009,16 @@
       gap: calc(var(--spacing) * 4);
     }
   }
+  .md\:gap-6 {
+    @media (width >= 48rem) {
+      gap: calc(var(--spacing) * 6);
+    }
+  }
+  .md\:gap-12 {
+    @media (width >= 48rem) {
+      gap: calc(var(--spacing) * 12);
+    }
+  }
   .md\:p-12 {
     @media (width >= 48rem) {
       padding: calc(var(--spacing) * 12);
@@ -2023,6 +2049,11 @@
       padding-inline: calc(var(--spacing) * 8);
     }
   }
+  .md\:px-14 {
+    @media (width >= 48rem) {
+      padding-inline: calc(var(--spacing) * 14);
+    }
+  }
   .md\:px-20 {
     @media (width >= 48rem) {
       padding-inline: calc(var(--spacing) * 20);
@@ -2041,6 +2072,16 @@
   .md\:py-4 {
     @media (width >= 48rem) {
       padding-block: calc(var(--spacing) * 4);
+    }
+  }
+  .md\:py-6 {
+    @media (width >= 48rem) {
+      padding-block: calc(var(--spacing) * 6);
+    }
+  }
+  .md\:pt-0 {
+    @media (width >= 48rem) {
+      padding-top: calc(var(--spacing) * 0);
     }
   }
   .md\:text-left {
@@ -2167,6 +2208,11 @@
   .lg\:w-12 {
     @media (width >= 64rem) {
       width: calc(var(--spacing) * 12);
+    }
+  }
+  .lg\:w-48 {
+    @media (width >= 64rem) {
+      width: calc(var(--spacing) * 48);
     }
   }
   .lg\:max-w-3xl {
