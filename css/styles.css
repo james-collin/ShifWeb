@@ -303,6 +303,9 @@
   .grid {
     display: grid;
   }
+  .hidden {
+    display: none;
+  }
   .inline-block {
     display: inline-block;
   }
@@ -690,8 +693,14 @@
   .px-14 {
     padding-inline: calc(var(--spacing) * 14);
   }
+  .px-26 {
+    padding-inline: calc(var(--spacing) * 26);
+  }
   .px-32 {
     padding-inline: calc(var(--spacing) * 32);
+  }
+  .px-36 {
+    padding-inline: calc(var(--spacing) * 36);
   }
   .px-56 {
     padding-inline: calc(var(--spacing) * 56);
@@ -722,6 +731,9 @@
   }
   .py-16 {
     padding-block: calc(var(--spacing) * 16);
+  }
+  .py-20 {
+    padding-block: calc(var(--spacing) * 20);
   }
   .py-28 {
     padding-block: calc(var(--spacing) * 28);
@@ -1006,6 +1018,52 @@
   .focus\:ring-blue-500 {
     &:focus {
       --tw-ring-color: var(--color-blue-500);
+    }
+  }
+  .data-active\:border-b-4 {
+    &[data-active] {
+      border-bottom-style: var(--tw-border-style);
+      border-bottom-width: 4px;
+    }
+  }
+  .data-active\:border-primary {
+    &[data-active] {
+      border-color: var(--color-primary);
+    }
+  }
+  .md\:flex-row {
+    @media (width >= 48rem) {
+      flex-direction: row;
+    }
+  }
+  .lg\:px-40 {
+    @media (width >= 64rem) {
+      padding-inline: calc(var(--spacing) * 40);
+    }
+  }
+  .lg\:px-56 {
+    @media (width >= 64rem) {
+      padding-inline: calc(var(--spacing) * 56);
+    }
+  }
+  .lg\:py-20 {
+    @media (width >= 64rem) {
+      padding-block: calc(var(--spacing) * 20);
+    }
+  }
+  .lg\:py-28 {
+    @media (width >= 64rem) {
+      padding-block: calc(var(--spacing) * 28);
+    }
+  }
+  .xl\:px-56 {
+    @media (width >= 80rem) {
+      padding-inline: calc(var(--spacing) * 56);
+    }
+  }
+  .xl\:py-28 {
+    @media (width >= 80rem) {
+      padding-block: calc(var(--spacing) * 28);
     }
   }
   .dark\:border-gray-600 {

@@ -23,7 +23,6 @@
           <div class="flex items-center gap-4">
             <nav class="flex justify-around gap-4">
               <div
-                data-active
                 class="px-6 py-3 data-active:border-b-4 data-active:border-primary"
               >
                 <a href="/" class="cursor-pointer font-medium drop-shadow-lg"
@@ -31,6 +30,7 @@
                 >
               </div>
               <div
+                data-active
                 class="px-6 py-3 data-active:border-b-4 data-active:border-primary"
               >
                 <a
@@ -42,9 +42,7 @@
               <div
                 class="px-6 py-3 data-active:border-b-4 data-active:border-primary"
               >
-                <a
-                  href="/"
-                  class="cursor-pointer font-medium hover:drop-shadow-lg"
+                <a class="cursor-pointer font-medium hover:drop-shadow-lg"
                   >Insight Navigator</a
                 >
               </div>
@@ -93,7 +91,10 @@
               <img src="/assets/icons/right-arrow.svg" alt="" />
             </button>
           </div>
-          <div id="hero1" class="flex items-center justify-around relative">
+          <div
+            id="hero1"
+            class="flex items-center justify-around relative hidden"
+          >
             <div class="flex flex-col gap-20 max-w-3xl pl-24">
               <div class="flex flex-col gap-2">
                 <h1 class="font-bold text-headline text-7xl/[96px]">
@@ -135,7 +136,7 @@
               />
             </div>
           </div>
-          <div id="hero2" class="px-60 py-14 hidden">
+          <div id="hero2" class="px-60 py-14">
             <div
               class="relative flex flex-col gap-8 items-center justify-center py-12 text-center"
             >
