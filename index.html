@@ -260,7 +260,7 @@
     </section>
 
     <section
-      class="w-full bg-[url(/assets/images/Background2.png)] bg-no-repeat bg-cover px-56 py-14 flex flex-col gap-28 overflow-hidden relative z-10"
+      class="w-full bg-[url(/assets/images/Background2.png)] bg-no-repeat bg-cover px-8 md:px-28 2xl:px-56 py-14 flex flex-col gap-28 overflow-hidden relative z-10"
     >
       <img
         class="absolute top-0 left-0 -z-10"
@@ -287,15 +287,17 @@
       />
 
       <div class="max-w-[120rem] mx-auto flex flex-col gap-28">
-        <div class="grid grid-cols-2 gap-2 min-h-[34rem]">
+        <div
+          class="grid lg:grid-cols-2 grid-rows-2 lg:grid-rows-1 grid-flow-row gap-2 min-h-[34rem]"
+        >
           <div class="relative">
             <img
-              class="absolute bottom-0 left-0 h-[17rem] z-10"
+              class="absolute bottom-56 2xl:bottom-0 left-0 h-[10rem] 2xl:h-[17rem] z-10"
               src="/assets/images/lab-weighing-scale.png"
               alt="lab-weighing-scale"
             />
             <img
-              class="absolute -top-0 right-20 h-[34rem]"
+              class="absolute -top-0 right-20 h-[25rem] 2xl:h-[34rem]"
               src="/assets/images/scientist-microscope.png"
               alt="scientist-microscope"
             />
@@ -330,7 +332,7 @@
           >
             What We Do?
           </h2>
-          <div class="grid grid-cols-4 gap-6">
+          <div class="grid xl:grid-cols-4 md:grid-cols-2 gap-6">
             <div
               class="rounded-2xl bg-white px-4 py-8 flex flex-col gap-4 shadow-whatWeDo"
             >
@@ -436,7 +438,9 @@
       </div>
     </section>
 
-    <section class="w-full bg-white py-14 px-56 flex flex-col gap-14">
+    <section
+      class="w-full bg-white py-14 px-10 lg:px-28 2xl:px-56 flex flex-col gap-14"
+    >
       <div class="flex justify-center">
         <h2
           class="font-figtree text-7xl/[64px] tracking-[0%] font-bold text-primary"
@@ -445,7 +449,7 @@
         </h2>
       </div>
 
-      <div class="grid grid-cols-[1fr_10px_1fr] gap-x-24">
+      <div class="md:grid hidden grid-cols-[1fr_10px_1fr] gap-x-24">
         <!-- Item-1 -->
         <div class="flex justify-end py-10">
           <div
@@ -584,6 +588,108 @@
         </div>
         <div class="flex justify-center">
           <div class="w-1 h-full bg-primary"></div>
+        </div>
+        <div class="flex gap-8">
+          <div
+            class="font-figtree font-bold text-7xl/[5rem] tracking-[0%] text-muted"
+          >
+            05
+          </div>
+          <div class="flex flex-col gap-4 pt-6">
+            <p
+              class="font-figtree font-semibold text-3xl/[2.5rem] text-secondary"
+            >
+              Service Options & Price Category
+            </p>
+            <p
+              class="font-poppins text-secondary opacity-60 text-base/[1.5rem]"
+            >
+              Display service package cards (e.g., Basic, Standard, Premium)
+              with price ranges and brief package details
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="md:hidden flex flex-col gap-24">
+        <div class="flex gap-8">
+          <div
+            class="font-figtree font-bold text-7xl/[5rem] tracking-[0%] text-muted"
+          >
+            01
+          </div>
+          <div class="flex flex-col gap-4 pt-6">
+            <p
+              class="font-figtree font-semibold text-3xl/[2.5rem] text-secondary"
+            >
+              Experiment Design
+            </p>
+            <p
+              class="font-poppins text-secondary opacity-60 text-base/[1.5rem]"
+            >
+              Define hypothesis, set objectives, design experiment
+            </p>
+          </div>
+        </div>
+        <div class="flex justify-end">
+          <div class="flex gap-8 text-right">
+            <div class="flex flex-col gap-4 pt-6">
+              <p
+                class="font-figtree font-semibold text-3xl/[2.5rem] text-secondary"
+              >
+                Data Collection
+              </p>
+              <p
+                class="font-poppins text-secondary opacity-60 text-base/[1.5rem]"
+              >
+                Gather data from sensors, lab tests, and field inputs
+              </p>
+            </div>
+            <div
+              class="font-figtree font-bold text-7xl/[5rem] tracking-[0%] text-primary"
+            >
+              02
+            </div>
+          </div>
+        </div>
+        <div class="flex gap-8">
+          <div
+            class="font-figtree font-bold text-7xl/[5rem] tracking-[0%] text-muted"
+          >
+            03
+          </div>
+          <div class="flex flex-col gap-4 pt-6">
+            <p
+              class="font-figtree font-semibold text-3xl/[2.5rem] text-secondary"
+            >
+              Analysis
+            </p>
+            <p
+              class="font-poppins text-secondary opacity-60 text-base/[1.5rem]"
+            >
+              Process data using statistical methods and ML models
+            </p>
+          </div>
+        </div>
+        <div class="flex justify-end">
+          <div class="flex gap-8 text-right">
+            <div class="flex flex-col gap-4 pt-6">
+              <p
+                class="font-figtree font-semibold text-3xl/[2.5rem] text-secondary"
+              >
+                Reporting
+              </p>
+              <p
+                class="font-poppins text-secondary opacity-60 text-base/[1.5rem]"
+              >
+                Generate dynamic dashboards & detailed reports
+              </p>
+            </div>
+            <div
+              class="font-figtree font-bold text-7xl/[5rem] tracking-[0%] text-muted"
+            >
+              04
+            </div>
+          </div>
         </div>
         <div class="flex gap-8">
           <div
