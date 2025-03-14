@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Insight Navigator</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <section
+      class="w-full bg-[url(/assets/images/Frame3.png)] bg-no-repeat bg-cover p-8 md:p-12"
+    >
+      <div class="max-w-[120rem] mx-auto flex flex-col gap-20">
+        <!-- Header Section -->
+        <header
+          class="w-full xl:w-4/5 mx-auto bg-white rounded-3xl h-28 flex justify-between py-3 px-5 lg:py-6 lg:px-9"
+        >
+          <div class="flex gap-6 items-center">
+            <div class="h-16 w-16 rounded-full bg-logo"></div>
+            <h1 class="text-2xl font-bold"><a href="/">LOGO HERE</a></h1>
+          </div>
+          <div class="flex relative items-center md:hidden z-50">
+            <button
+              data-collapse-toggle="navbar"
+              type="button"
+              class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+              aria-controls="navbar"
+              aria-expanded="false"
+              onclick="openNav()"
+            >
+              <span class="sr-only">Open main menu</span>
+              <svg
+                class="w-5 h-5"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 17 14"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M1 1h15M1 7h15M1 13h15"
+                />
+              </svg>
+            </button>
+            <div
+              id="mobile-nav"
+              class="absolute hidden bg-white rounded-2xl p-4 right-10 top-10 shadow-about-us-card"
+            >
+              <nav
+                class="flex flex-col items-center w-40 justify-around gap-2 lg:gap-4"
+              >
+                <div
+                  class="lg:px-6 lg:py-3 data-active:border-b-4 data-active:border-primary"
+                >
+                  <a href="/" class="cursor-pointer font-medium drop-shadow-lg"
+                    >Home</a
+                  >
+                </div>
+                <div
+                  class="lg:px-6 lg:py-3 data-active:border-b-4 data-active:border-primary"
+                >
+                  <a
+                    href="/services.html"
+                    class="cursor-pointer font-medium hover:drop-shadow-lg"
+                    >Services</a
+                  >
+                </div>
+                <div
+                  data-active
+                  class="lg:px-6 lg:py-3 data-active:border-b-4 data-active:border-primary"
+                >
+                  <a
+                    href="/insight-navigator.html"
+                    class="cursor-pointer font-medium hover:drop-shadow-lg"
+                    >Insight <span class="hidden lg:inline">Navigator</span></a
+                  >
+                </div>
+                <div
+                  class="lg:px-6 lg:py-3 data-active:border-b-4 data-active:border-primary"
+                >
+                  <a
+                    href="/about.html"
+                    class="cursor-pointer font-medium hover:drop-shadow-lg"
+                    >About Us</a
+                  >
+                </div>
+                <div
+                  class="lg:px-6 lg:py-3 data-active:border-b-4 data-active:border-primary"
+                >
+                  <a
+                    href="/contact.html"
+                    class="cursor-pointer font-medium hover:drop-shadow-lg"
+                    >Contact Us</a
+                  >
+                </div>
+              </nav>
+            </div>
+          </div>
+          <div class="hidden md:flex items-center gap-4" id="navbar">
+            <nav class="flex justify-around gap-2 lg:gap-4">
+              <div
+                class="lg:px-6 lg:py-3 data-active:border-b-4 data-active:border-primary"
+              >
+                <a href="/" class="cursor-pointer font-medium drop-shadow-lg"
+                  >Home</a
+                >
+              </div>
+              <div
+                class="lg:px-6 lg:py-3 data-active:border-b-4 data-active:border-primary"
+              >
+                <a
+                  href="/services.html"
+                  class="cursor-pointer font-medium hover:drop-shadow-lg"
+                  >Services</a
+                >
+              </div>
+              <div
+                data-active
+                class="lg:px-6 lg:py-3 data-active:border-b-4 data-active:border-primary"
+              >
+                <a
+                  href="/insight-navigator.html"
+                  class="cursor-pointer font-medium hover:drop-shadow-lg"
+                  >Insight <span class="hidden lg:inline">Navigator</span></a
+                >
+              </div>
+              <div
+                class="lg:px-6 lg:py-3 data-active:border-b-4 data-active:border-primary"
+              >
+                <a
+                  href="/about.html"
+                  class="cursor-pointer font-medium hover:drop-shadow-lg"
+                  >About Us</a
+                >
+              </div>
+              <div
+                class="lg:px-6 lg:py-3 data-active:border-b-4 data-active:border-primary"
+              >
+                <a
+                  href="/contact.html"
+                  class="cursor-pointer font-medium hover:drop-shadow-lg"
+                  >Contact Us</a
+                >
+              </div>
+            </nav>
+            <div
+              class="w-12 h-12 rounded-full bg-primary flex justify-center items-center"
+            >
+              <img src="/assets/icons/cart.svg" alt="Cart" class="w-5 h-5" />
+            </div>
+          </div>
+        </header>
+        <div class="w-full md:w-4/5 mx-auto">
+          <div class="flex flex-col gap-4">
+            <div class="relative inline-block w-fit">
+              <h1 class="text-7xl font-bold">Insight Navigator</h1>
+              <img
+                class="absolute -bottom-7"
+                src="/assets/images/underline.svg"
+                alt="underline"
+              />
+            </div>
+            <p class="font-medium text-2xl/[2.5rem]">
+              Home / Pages / Contact us
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="max-w-[120rem] mx-auto flex flex-col lg:gap-8 gap-12 px-8 md:px-28 2xl:px-56 py-14"
+    >
+      <div class="flex flex-col gap-y-7 w-full font-poppins">
+        <div class="max-w-2xl mx-auto flex flex-col gap-y-7">
+          <h2
+            class="font-semibold text-2xl md:text-4xl text-[#213430] text-center"
+          >
+            Define your need
+          </h2>
+          <hr
+            class="max-w-14 w-14 mx-auto h-1 bg-highlight border-none rounded-full"
+          />
+        </div>
+        <div class="h-16 flex flex-col gap-y-4 sm:gap-y-7">
+          <!-- Progress Line & Steps -->
+          <div class="relative flex justify-between items-center">
+            <!-- Background Line -->
+            <div
+              class="absolute left-0 top-1/2 w-full h-2 bg-[#F5F5F5] -translate-y-1/2 rounded-lg"
+            ></div>
+
+            <!-- Steps (Dots) -->
+            <div class="relative z-10 flex justify-around w-full px-2 sm:px-0">
+              <div
+                class="w-5 h-5 sm:w-7 sm:h-7 flex items-center justify-center bg-highlight rounded-full"
+              ></div>
+              <div
+                class="w-5 h-5 sm:w-7 sm:h-7 flex items-center justify-center bg-highlight rounded-full"
+              ></div>
+              <div
+                class="w-5 h-5 sm:w-7 sm:h-7 flex items-center justify-center bg-highlight rounded-full"
+              ></div>
+              <div
+                class="w-5 h-5 sm:w-7 sm:h-7 flex items-center justify-center bg-highlight rounded-full"
+              ></div>
+            </div>
+          </div>
+
+          <!-- Step Titles -->
+          <div
+            class="grid grid-cols-4 sm:flex sm:gap-x-7 w-full justify-around items-center text-center sm:text-left font-semibold text-xs sm:text-sm"
+          >
+            <div>Define your need</div>
+            <div>Choose your specific service</div>
+            <div>Payment Details</div>
+            <div>Provide your details</div>
+          </div>
+        </div>
+      </div>
+      <!-- middle section page 1 -->
+      <div
+        id="step-1"
+        class="step flex flex-col gap-y-10 py-1 font-figtree px-3.5 lg:px-0"
+      >
+        <h1
+          class="font-bold text-3xl md:text-5xl text-center md:text-left text-primary"
+        >
+          What solution do you need
+        </h1>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-7 gap-y-10">
+          <div
+            class="flex flex-col gap-y-3 border border-border rounded-3xl p-6 pb-8 shadow-payment-checkout"
+          >
+            <div class="rounded-4xl w-14 h-14 bg-highlight">
+              <img
+                class="h-full w-full object-scale-down"
+                src="./assets/icons/chemical-efficacy-analysis.svg"
+                alt=""
+              />
+            </div>
+            <span class="font-semibold text-lg md:text-2xl text-secondary"
+              >Chemical Efficacy Analysis</span
+            >
+            <span
+              class="font-normal text-sm md:text-lg text-secondary opacity-60"
+              >Blood tests, imaging studies, and other tests to diagnose health
+              conditions</span
+            >
+          </div>
+          <div
+            class="flex flex-col gap-y-3 border border-border rounded-3xl p-6 pb-8 shadow-payment-checkout"
+          >
+            <div class="rounded-4xl w-14 h-14 bg-highlight">
+              <img
+                class="h-full w-full object-scale-down"
+                src="./assets/icons/compliance-standards.svg"
+                alt=""
+              />
+            </div>
+            <span class="font-semibold text-lg md:text-2xl text-secondary"
+              >Regulatory Compliance & Safety Standards
+            </span>
+            <span
+              class="font-normal text-sm md:text-lg text-secondary opacity-60"
+              >Blood tests, imaging studies, and other tests to diagnose health
+              conditions</span
+            >
+          </div>
+          <div
+            class="flex flex-col gap-y-3 border border-border rounded-3xl p-6 pb-8 shadow-payment-checkout"
+          >
+            <div class="rounded-4xl w-14 h-14 bg-highlight">
+              <img
+                class="h-full w-full object-scale-down"
+                src="./assets/icons/analytics-reporting.svg"
+                alt=""
+              />
+            </div>
+            <span class="font-semibold text-lg md:text-2xl text-secondary"
+              >Custom Analytics & Reporting
+            </span>
+            <span
+              class="font-normal text-sm md:text-lg text-secondary opacity-60"
+              >Blood tests, imaging studies, and other tests to diagnose health
+              conditions</span
+            >
+          </div>
+          <div
+            class="flex flex-col gap-y-3 border border-border rounded-3xl p-6 pb-8 shadow-payment-checkout"
+          >
+            <div class="rounded-4xl w-14 h-14 bg-highlight">
+              <img
+                class="h-full w-full object-scale-down"
+                src="./assets/icons/risk-assessment.svg"
+                alt=""
+              />
+            </div>
+            <span class="font-semibold text-lg md:text-2xl text-secondary"
+              >Risk Assessment & Mitigation</span
+            >
+            <span
+              class="font-normal text-sm md:text-lg text-secondary opacity-60"
+              >Blood tests, imaging studies, and other tests to diagnose health
+              conditions</span
+            >
+          </div>
+        </div>
+        <div class="flex flex-col gap-y-3">
+          <span class="font-semibold text-lg md:text-2xl text-secondary"
+            >Other (please specify your need)</span
+          >
+          <textarea
+            class="w-full border resize-none border-light-gray rounded-md p-4 focus:outline-none"
+            rows="4"
+            placeholder="Type your Message"
+          ></textarea>
+        </div>
+      </div>
+      <!-- middle section page 1 -->
+      <!-- middle section page 2 -->
+      <div id="step-2" class="step hidden py-1 font-figtree px-4 m lg:px-0">
+        <h1
+          class="font-bold text-3xl md:text-5xl text-center md:text-left text-primary"
+        >
+          Solution options under selected category
+        </h1>
+        <div
+          class="py-10 px-5 rounded-3xl border border-border flex flex-col gap-y-3 shadow-payment-checkout"
+        >
+          <div class="h-14 w-14 bg-highlight rounded-4xl">
+            <img
+              src="./assets/icons/chemical-efficacy-analysis-2.svg"
+              alt="icon"
+              class="w-full h-full object-scale-down"
+            />
+          </div>
+
+          <div class="flex flex-col gap-y-3">
+            <p class="font-semibold text-lg md:text-2xl">
+              Chemical Efficacy Analysis
+            </p>
+            <div class="flex flex-col gap-y-3">
+              <div class="flex gap-x-3 items-center">
+                <div class="h-5 w-5 border-2 border-primary rounded-full"></div>
+                <p
+                  class="font-normal text-xs md:text-sm text-secondary opacity-60"
+                >
+                  In-vitro Testing Analysis
+                </p>
+              </div>
+              <div class="flex gap-x-3 items-center">
+                <div class="h-5 w-5 border-2 border-primary rounded-full"></div>
+                <p
+                  class="font-normal text-xs md:text-sm text-secondary opacity-60"
+                >
+                  Field Trial Data Evaluation
+                </p>
+              </div>
+              <div class="flex gap-x-3 items-center">
+                <div class="h-5 w-5 border-2 border-primary rounded-full"></div>
+                <p
+                  class="font-normal text-xs md:text-sm text-secondary opacity-60"
+                >
+                  Long-Term Stability Studies
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col gap-y-7">
+          <h1
+            class="font-bold text-3xl md:text-5xl text-center md:text-left text-primary"
+          >
+            NDA & File Upload
+          </h1>
+          <div class="flex flex-col gap-y-3">
+            <div
+              class="border border-dashed flex flex-col justify-center items-center py-7"
+            >
+              <div class="flex flex-col gap-y-2 items-center">
+                <img
+                  src="./assets/icons/file-upload.svg"
+                  alt="icon"
+                  class="w-8 h-6 md:w-16 md:h-12"
+                />
+                <p class="font-semibold text-sm md:text-lg text-secondary">
+                  Drag and drop your files here
+                </p>
+                <p class="font-normal text-lg md:text-2xl text-[#909090]">or</p>
+                <button
+                  class="py-1.5 px-4 md:py-2.5 md:px-5 bg-primary text-white rounded-xl"
+                >
+                  Browse file here
+                </button>
+                <p class="font-normal text-sm md:text-xl text-[#909090]">
+                  Maximum files size 10 MB
+                </p>
+              </div>
+            </div>
+            <div class="flex gap-x-3 items-center">
+              <input
+                type="checkbox"
+                class="w-4 h-4 border border-black rounded-sm"
+              />
+              <p class="font-poppins font-medium text-sm opacity-60">
+                Request NDA before proceeding
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- middle section page 2 -->
+
+      <!-- middle section page 3 -->
+      <div id="step-3" class="step hidden py-1 font-figtree px-3.5 m lg:px-0">
+        <h1
+          class="font-bold text-3xl md:text-5xl text-center md:text-left text-primary"
+        >
+          Payment and checkout
+        </h1>
+        <div
+          class="py-10 px-5 grid gap-6 md:grid-cols-3 shadow-payment-checkout rounded-3xl border border-border"
+        >
+          <div class="md:col-span-2 grid gap-4">
+            <div class="bg-highlight h-14 w-14 rounded-full">
+              <img
+                src="./assets/icons/business-management-operation-smartphone-hand.svg"
+                alt="icon"
+                class="h-full w-full object-scale-down"
+              />
+            </div>
+
+            <div class="grid gap-4 md:grid-cols-2">
+              <div class="flex flex-col gap-y-3">
+                <label
+                  class="block font-semibold text-lg md:text-2xl text-secondary"
+                  >Card Number</label
+                >
+                <input
+                  type="text"
+                  placeholder="4242 42 42 4242 4242"
+                  class="w-full p-2 border border-border rounded-md shadow-payment-checkout-input h-10 md:h-14"
+                />
+              </div>
+              <div class="flex flex-col gap-y-3">
+                <label
+                  class="block font-semibold text-lg md:text-2xl text-secondary"
+                  >Expiry Date</label
+                >
+                <input
+                  type="text"
+                  placeholder="MM/YY"
+                  class="w-full p-2 border border-border shadow-payment-checkout-input rounded-md h-10 md:h-14"
+                />
+              </div>
+              <div class="flex flex-col gap-y-3">
+                <label
+                  class="block font-semibold text-lg md:text-2xl text-secondary"
+                  >CVV</label
+                >
+                <input
+                  type="text"
+                  placeholder="123 123"
+                  class="w-full p-2 border rounded-md border-border shadow-payment-checkout-input h-10 md:h-14"
+                />
+              </div>
+              <div class="flex gap-2">
+                <div class="flex flex-col gap-y-3">
+                  <label
+                    class="block font-semibold text-lg md:text-2xl text-secondary"
+                    >Promo Code</label
+                  >
+                  <input
+                    type="text"
+                    placeholder="TODAY"
+                    class="w-full p-2 border rounded-md border-border shadow-payment-checkout-input h-10 md:h-14"
+                  />
+                </div>
+                <button
+                  class="bg-primary text-white px-4 py-2 rounded-md self-end cursor-pointer h-10 md:h-14"
+                >
+                  Check
+                </button>
+              </div>
+            </div>
+
+            <div class="flex gap-x-3 items-center">
+              <input
+                type="checkbox"
+                class="w-4 h-4 border border-black rounded-sm"
+              />
+              <p class="font-poppins font-medium text-sm opacity-60">
+                Request NDA before proceeding
+              </p>
+            </div>
+          </div>
+
+          <div class="bg-[#94D4DB33] p-4 rounded-2xl">
+            <h3 class="font-semibold text-xl md:text-2xl text-secondary">
+              Order summary
+            </h3>
+            <div class="mt-4 space-y-2">
+              <div class="flex justify-between">
+                <span class="font-poppins font-normal text-sm"
+                  >Service Fee</span
+                >
+                <span class="text-black">$599.00</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="font-poppins font-normal text-sm"
+                  >Processing Fee</span
+                >
+                <span class="text-black">$28.83</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="font-poppins font-normal text-sm">Discount</span>
+                <span class="text-[#1F9A49]">- $3.00</span>
+              </div>
+            </div>
+            <hr class="my-3" />
+            <div class="flex justify-between font-semibold text-gray-800">
+              <span class="font-poppins font-bold text-sm">Total</span>
+              <span>$628.82</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- middle section page 3 -->
+
+      <!-- middle section page 4 -->
+      <div id="step-4" class="step hidden py-1 font-figtree px-3.5 m lg:px-0">
+        <h1
+          class="font-bold text-3xl md:text-5xl text-center md:text-left text-primary"
+        >
+          Provide your details
+        </h1>
+        <div
+          class="py-10 px-5 gap-3 shadow-payment-checkout rounded-3xl border border-border bg-white"
+        >
+          <div class="flex items-center mb-4">
+            <div class="bg-highlight h-14 w-14 rounded-full">
+              <img
+                src="./assets/icons/person.svg"
+                alt="icon"
+                class="h-full w-full object-scale-down"
+              />
+            </div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="flex flex-col gap-y-3">
+              <label
+                class="block text-secondary font-semibold text-lg md:text-2xl"
+                >Full Name</label
+              >
+              <input
+                type="text"
+                class="w-full py-2 px-2 md:py-4 md:px-2.5 border border-light-gray rounded-md shadow-payment-checkout-input text-navigator-details-text font-satoshi font-normal text-sm"
+                placeholder="John"
+              />
+            </div>
+            <div class="flex flex-col gap-y-3">
+              <label
+                class="block text-secondary font-semibold text-lg md:text-2xl"
+                >Email Address</label
+              >
+              <input
+                type="email"
+                class="w-full py-2 px-2 md:py-4 md:px-2.5 border border-light-gray rounded-md shadow-payment-checkout-input text-navigator-details-text font-satoshi font-normal text-sm"
+                placeholder="John@example.com"
+              />
+            </div>
+            <div class="flex flex-col gap-y-3">
+              <label
+                class="block text-secondary font-semibold text-lg md:text-2xl"
+                >Phone Number</label
+              >
+              <input
+                type="tel"
+                class="w-full py-2 px-2 md:py-4 md:px-2.5 border border-light-gray rounded-md shadow-payment-checkout-input text-navigator-details-text font-satoshi font-normal text-sm"
+                placeholder="0000 000 0000"
+              />
+            </div>
+            <div class="flex flex-col gap-y-3">
+              <label
+                class="block text-secondary font-semibold text-lg md:text-2xl"
+                >Preferred Meeting Date</label
+              >
+              <div class="relative">
+                <input
+                  type="date"
+                  placeholder="select date"
+                  class="w-full py-2 px-2 md:py-4 pl-12 border border-light-gray rounded-md shadow-payment-checkout-input text-navigator-details-text font-satoshi font-normal text-sm"
+                />
+                <img
+                  src="./assets/icons/calendar.svg"
+                  alt="icon"
+                  class="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 md:h-6 md:w-6"
+                />
+              </div>
+            </div>
+            <div class="col-span-1 md:col-span-2">
+              <label class="block text-gray-700 font-semibold"></label>
+              <textarea
+                class="w-full border border-light-gray text-navigator-details-text rounded-md py-4 px-2.5 font-satoshi shadow-payment-checkout-input"
+                placeholder="Any specific requirements or questions?"
+                rows="4"
+              ></textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- middle section page 4 -->
+
+      <!-- buttons div -->
+      <div class="flex justify-around md:justify-end gap-x-7">
+        <button
+          id="backBtn"
+          class="uppercase hidden bg-primary w-36 h-10 md:w-56 md:h-16 rounded-[110px] items-center justify-center gap-x-1 cursor-pointer"
+        >
+          <img
+            class="w-10 h-2.5"
+            src="./assets/icons/insight-navigator-arrow-left.svg"
+            alt=""
+          />
+          <span class="text-button">Back</span>
+        </button>
+        <button
+          id="nextBtn"
+          class="uppercase bg-primary w-36 h-10 md:w-56 md:h-16 rounded-[110px] flex items-center justify-center gap-x-1 cursor-pointer"
+        >
+          <span class="text-button">Next</span>
+          <img
+            class="w-10 h-2.5"
+            src="./assets/icons/insight-navigator-arrow-right.svg"
+            alt=""
+          />
+        </button>
+      </div>
+    </section>
+    <!-- dialog  -->
+    <div
+      id="submission-dialog"
+      class="fixed inset-0 bg-[#4D4D4DAD] bg-opacity-80 justify-center items-center hidden font-figtree"
+    >
+      <div
+        class="bg-white p-6 rounded-3xl shadow-payment-completion w-full sm:w-lg h-auto text-center flex flex-col gap-y-3.5 items-center"
+      >
+        <div class="flex justify-center mb-4 h-16 w-16 bg-primary rounded-full">
+          <img
+            src="./assets/icons/submit.svg"
+            alt="icon"
+            class="w-full h-full object-scale-down"
+          />
+        </div>
+        <h2 class="text-3xl font-semibold text-secondary">
+          Thank You for Your Submission
+        </h2>
+        <p class="font-poppins font-normal text-sm">
+          Thank you for your interest! Your request and payment have been
+          received. A representative will contact you shortly.
+        </p>
+        <button
+          id="close-dialog"
+          class="px-10 py-4 rounded-[110px] bg-primary p-2 text-button cursor-pointer"
+          onclick="closeDialog()"
+        >
+          RETURN TO HOMEPAGE
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    let currentStep = 1;
+    const totalSteps = 4;
+
+    const prevBtn = document.getElementById("backBtn");
+    const nextBtn = document.getElementById("nextBtn");
+    const steps = document.querySelectorAll(".step");
+
+    const finishBtn = document.querySelector("#step-4 button:last-child");
+    const dialog = document.getElementById("submission-dialog");
+    const closeDialog = document.getElementById("close-dialog");
+
+    function updateSteps() {
+      steps.forEach((step, index) => {
+        if (index + 1 === currentStep) {
+          step.classList.remove("hidden");
+          step.classList.add("flex", "flex-col", "gap-y-10");
+        } else {
+          step.classList.add("hidden");
+          step.classList.remove("flex", "flex-col", "gap-y-10");
+        }
+      });
+
+      prevBtn.classList.toggle("hidden", currentStep === 1);
+    }
+
+    nextBtn.addEventListener("click", function () {
+      if (currentStep === totalSteps) {
+        dialog.classList.add("flex");
+        dialog.classList.remove("hidden");
+      } else if (currentStep + 1 > 1) {
+        prevBtn.classList.add("flex");
+        prevBtn.classList.remove("hidden");
+      }
+
+      if (currentStep < totalSteps) {
+        currentStep++;
+        updateSteps();
+      }
+    });
+
+    prevBtn.addEventListener("click", function () {
+      if (currentStep - 1 === 1) {
+        prevBtn.classList.add("hidden");
+        prevBtn.classList.remove("flex");
+      }
+      if (currentStep > 1) {
+        currentStep--;
+        updateSteps();
+      }
+    });
+
+    finishBtn.addEventListener("click", () => {
+      if (finishBtn.innerText.trim().toLowerCase() === "finish") {
+        dialog.classList.add("flex");
+        dialog.classList.remove("hidden");
+      }
+    });
+
+    updateSteps();
+  });
+
+  function closeDialog() {
+    const closeDialog = document.getElementById("close-dialog");
+    const dialog = document.getElementById("submission-dialog");
+
+    dialog.classList.add("hidden");
+    dialog.classList.remove("flex");
+  }
+</script>
